@@ -22,7 +22,7 @@
             </a>
             <% } %>
         </div>
-
+      
         <div class="card mb-3">
             <div class="card-body">
                 <h5 class="card-title"><%= spot.title%></h5>
@@ -32,6 +32,8 @@
                 <li class="list-group-item text-muted"><%= spot.location%></li>
                 <li class="list-group-item">Submitted by <%= spot.author.username%></li>
                 <li class="list-group-item">$<%= spot.price%>/night</li>
+                <a class="list-group-item"
+                href="https://maps.google.com/?q=<%=spot.title%>"target="_blank">  <img src="/images/location-sign.svg"  srcset="" height="20px" >Show on Google Maps</a>
             </ul>
             <%  if( currentUser && spot.author.equals(currentUser._id))  {%>
             <div class="card-body">
